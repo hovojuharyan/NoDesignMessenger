@@ -48,9 +48,9 @@ public class MainController {
     public String loginSuccess(){
         CurrentUser principal= (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal.getUser().getUserType()== UserType.ADMIN){
-            return "redirect:/admin/adminPage";
+            return "redirect:/admin/admin";
         }
-        return "redirect:/user/messenger";
+        return "redirect:/user/myPage";
     }
 
     @PostMapping("/Registration")

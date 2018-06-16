@@ -850,6 +850,8 @@ Website: http://emilcarlsson.se/
 
 -->
 
+<%--<a href="/logout">---Logout---</a><a href="/user/allUsersPage">---All Users---</a><a href="/user/friendsPage">---My Friends---</a><a href="/user/requestPage">---My Requests---</a>--%>
+
 <div id="frame">
     <div id="sidepanel">
         <div id="profile">
@@ -1006,17 +1008,20 @@ Website: http://emilcarlsson.se/
             </ul>
         </div>
         <div id="bottom-bar">
-            <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span>
-            </button>
-            <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+            <a href="/user/friendsPage"><button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>My Friends</span>
+            </button></a>
+            <%--<button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span>--%>
+            <%--</button>--%>
+            <a href="/user/myPage"><button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>My Page</span></button></a>
+            <%--<button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>--%>
         </div>
     </div>
     <div class="content">
         <div class="contact-profile">
             <%--<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />--%>
             <%--<p>Harvey Specter</p>--%>
-            <img src="/image?fileName=${destination.picUrl}" alt=""/>
-            <p>${destination.name} ${destination.surname}</p>
+                    <img src="/image?fileName=${destination.picUrl}" alt=""/>
+                    <p>${destination.name} ${destination.surname}</p>
             <div class="social-media">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
                 <i class="fa fa-twitter" aria-hidden="true"></i>

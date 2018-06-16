@@ -33,16 +33,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                .loginPage("/loginReg")
                .defaultSuccessUrl("/loginSuccess")
                 .usernameParameter("email")
-               .passwordParameter("password");
-        //          .and
+               .passwordParameter("password")
+                .and()
 //                .logout()
 //                .logoutSuccessUrl("/logoutSuccess")
 //                .and()
-//                .authorizeRequests()
-//                .antMatchers("/admin/**").hasAuthority("ADMIN")
-//                .antMatchers("/user/**").hasAnyAuthority("USER","ADMIN")
-//                .anyRequest()
-//                .permitAll();
+                .authorizeRequests()
+                .antMatchers("/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/user/**").hasAnyAuthority("USER","ADMIN")
+                .anyRequest()
+                .permitAll();
 
 
     }
